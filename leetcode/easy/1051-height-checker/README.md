@@ -58,18 +58,15 @@ All indices match.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 76.46%)  
+**Runtime:** 5 ms (beats 33.46%)  
 **Memory:** 43.1 MB (beats 81.34%)  
-**Submitted:** 2026-10-20T16:20:47.879Z  
+**Submitted:** 2026-10-20T16:22:10.683Z  
 
 ```java
 class Solution {
     public int heightChecker(int[] heights) {
         int n = heights.length;
-        int[] expected = new int[n];
-        for(int i=0;i<n;i++){
-            expected[i] = heights[i]; 
-        }
+        int[] expected = heights.clone();
         Arrays.sort(expected);
         int count = 0;
         for(int i=0;i<n;i++){
